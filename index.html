@@ -46,6 +46,26 @@
             border-radius: 5px;
             font-weight: bold;
         }
+        form {
+            margin-top: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            width: 70%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
         footer {
             text-align: center;
             padding: 20px;
@@ -67,14 +87,19 @@
         </section>
 
         <section>
-            <h3>Survey</h3>
-            <p>Take our 1-minute community survey and share what matters most to you.</p>
-            <a href="#" class="button">Take the Survey</a>
+            <h3>Get Involved</h3>
+            <p>Stay informed about upcoming community meetings, surveys, and volunteer opportunities to help shape the future of Indianapolis.</p>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <br>
+                <input type="submit" value="Sign Up">
+            </form>
         </section>
 
         <section>
-            <h3>Get Involved</h3>
-            <p>Stay informed about upcoming community meetings, surveys, and volunteer opportunities to help shape the future of Indianapolis.</p>
+            <h3>Survey</h3>
+            <p>Take our 1-minute community survey and share what matters most to you.</p>
+            <a href="#" class="button">Take the Survey</a>
         </section>
     </main>
 
