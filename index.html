@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future of Indy</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <style>
         body {
             margin: 0;
@@ -87,12 +88,29 @@
         .policy-section li {
             margin-bottom: 10px;
         }
-    </style>
-    <script>
-        function openDonorbox() {
-            window.open('https://donorbox.org/embed/future-of-indy', '_blank');
+        /* Modal styles */
+        .thank-you-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
         }
-    </script>
+        .thank-you-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -113,11 +131,18 @@
         </section>
 
         <section>
-            <form action="https://futureofindy.us9.list-manage.com/subscribe/post?u=ca96c281167ccd1bf862436bf&amp;id=f7ca87be9d" method="post" target="_blank">
-                <label for="email">Join our team to volunteer:</label><br>
-                <input type="email" id="email" name="EMAIL" placeholder="Enter your email" required>
-                <input type="submit" value="Sign Up">
-            </form>
+            <div id="mc_embed_signup">
+                <form action="https://futureofindy.us19.list-manage.com/subscribe/post?u=7e739e6c5df440ff5e37d2a6b&amp;id=a883200159&amp;f_id=00cac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" onsubmit="showThankYou();">
+                    <div id="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL">Join our team to volunteer:</label><br>
+                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="Enter your email">
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_7e739e6c5df440ff5e37d2a6b_a883200159" tabindex="-1" value="">
+                        </div>
+                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                    </div>
+                </form>
+            </div>
         </section>
 
         <section class="policy-section">
@@ -135,11 +160,36 @@
             <h4>Homelessness</h4>
             <ul></ul>
         </section>
-
     </main>
 
     <footer>
         <p>&copy; 2025 Future of Indy. All rights reserved.</p>
     </footer>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="thank-you-modal">
+        <div class="thank-you-content">
+            <p>✅ Thank you for joining us!</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array(); 
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';ftypes[0]='email';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+
+        function showThankYou() {
+            setTimeout(function() {
+                document.getElementById('thankYouModal').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('thankYouModal').style.display = 'none';
+                }, 3000);
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
