@@ -1,195 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future of Indy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #003366;
-            min-height: 150px;
-            padding: 40px 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-            color: #ffffff;
-        }
-        header h2 {
-            margin: 10px 0 0;
-            font-size: 20px;
-            color: #00cc66;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        a.button,
-        button.button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin-top: 10px;
-            background-color: #003366;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        form {
-            margin-top: 20px;
-        }
-        input[type="email"] {
-            padding: 10px;
-            width: 70%;
-            max-width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #003366;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #003366;
-            color: #ffffff;
-        }
-        .policy-section ul {
-            padding-left: 20px;
-        }
-        .policy-section li {
-            margin-bottom: 10px;
-        }
-        /* Modal styles */
-        .thank-you-modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .thank-you-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            text-align: center;
-            border-radius: 8px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Future of Indy – Patrick McAuley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #0f172a;
+      background: #f3f4f6;
+    }
+    a { text-decoration: none; color: inherit; }
+    header {
+      background: #0b2958;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .nav-left img {
+      height: 40px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .hero {
+      background: #0b2958;
+      color: #fff;
+      padding: 4rem 1.25rem 3rem;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      max-width: 32rem;
+    }
+    .hero-tagline {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.9;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #f97316;
+      color: #fff;
+      border-color: #f97316;
+    }
+    .btn-primary:hover {
+      background: #ea580c;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    .hero-card {
+      background: rgba(15,23,42,0.92);
+      border-radius: 1rem;
+      padding: 1.5rem 1.75rem;
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+    section { margin-bottom: 3rem; }
+    h2.section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+      color: #0b2958;
+    }
+    .section-intro {
+      font-size: 0.98rem;
+      max-width: 40rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.8fr) minmax(0, 2.2fr);
+      gap: 1.75rem;
+      align-items: flex-start;
+    }
+    .about-card, .info-card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+      border: 1px solid #e5e7eb;
+      font-size: 0.96rem;
+      color: #374151;
+    }
+    .about-card h3, .info-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #0b2958;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: #e0e7ff;
+      color: #1d4ed8;
+      margin-bottom: 0.6rem;
+    }
+    .info-card img {
+      width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+    .priorities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 1.25rem;
+    }
+    .priority {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.25rem 1.3rem;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+      border: 1px solid #e5e7eb;
+      font-size: 0.9rem;
+    }
+    .band {
+      background: #0b2958;
+      color: #e5e7eb;
+      border-radius: 1rem;
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .join-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+      gap: 1.75rem;
+      align-items: flex-start;
+    }
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.25rem 1.25rem 2rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+      text-align: center;
+      background: #f9fafb;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Future of Indy</h1>
-        <h2>Shaping Indianapolis Together</h2>
-    </header>
 
-    <main>
-        <section>
-            <h3>About the Initiative</h3>
-            <p>Future of Indy is a conservative grassroots movement to empower Indianapolis residents. <u>It does not happen without focused, determined, hands-on and consistent energetic leadership.</u></p>
-        </section>
+<header>
+  <div class="nav">
+    <div class="nav-left">
+      <img src="future-of-indy-logo.png" alt="Future of Indy logo" />
+      <div style="font-weight:700; font-size:1.05rem;">Future of Indy</div>
+    </div>
+    <nav class="nav-links">
+      <a href="#about">About Patrick</a>
+      <a href="#priorities">Priorities</a>
+      <a href="#future-of-indy">Future of Indy</a>
+      <a href="#join">Join</a>
+    </nav>
+  </div>
+</header>
 
-        <section>
-            <h3>Survey</h3>
-            <p>Please take our 1-minute community survey.</p>
-            <a href="https://forms.gle/A8etaEAri94V8tS69" class="button">Take the Survey</a>
-        </section>
-
-        <section>
-            <div id="mc_embed_signup">
-                <form action="https://futureofindy.us19.list-manage.com/subscribe/post?u=7e739e6c5df440ff5e37d2a6b&amp;id=a883200159&amp;f_id=00cac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" onsubmit="showThankYou();">
-                    <div id="mc_embed_signup_scroll">
-                        <label for="mce-EMAIL">Join our team to volunteer:</label><br>
-                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="Enter your email">
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                            <input type="text" name="b_7e739e6c5df440ff5e37d2a6b_a883200159" tabindex="-1" value="">
-                        </div>
-                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <section class="policy-section">
-            <h3>🏛️ Four Policy Pillars</h3>
-
-            <h4>Public Safety</h4>
-            <ul></ul>
-
-            <h4>Workforce Housing</h4>
-            <ul></ul>
-
-            <h4>Apprenticeships</h4>
-            <ul></ul>
-
-            <h4>Homelessness</h4>
-            <ul></ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Future of Indy. All rights reserved.</p>
-    </footer>
-
-    <!-- Thank You Modal -->
-    <div id="thankYouModal" class="thank-you-modal">
-        <div class="thank-you-content">
-            <p>✅ Thank you for joining us!</p>
-        </div>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tagline">Patrick McAuley for Indiana’s 7th District</div>
+      <h1>Safer streets. Stable homes. Real opportunity.</h1>
+      <p>
+        Future of Indy is a listening project and a campaign for common-sense leadership in the heart of Indianapolis —
+        focused on public safety, workforce housing, apprenticeships, and a compassionate but accountable response to homelessness.
+      </p>
+      <a href="#join" class="btn btn-primary">Join the Conversation</a>
     </div>
 
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">
-        (function($) {
-            window.fnames = new Array(); 
-            window.ftypes = new Array();
-            fnames[0]='EMAIL';ftypes[0]='email';
-        }(jQuery));
-        var $mcj = jQuery.noConflict(true);
+    <div class="hero-card">
+      <h2>Why Future of Indy?</h2>
+      <p>
+        Patrick launched Future of Indy in January 2025 to ask a simple question:
+        <strong>What do people in Indianapolis care about most?</strong>
+      </p>
+      <ul>
+        <li>Safe neighborhoods and trusted police–community relationships</li>
+        <li>Workforce housing close to jobs and schools</li>
+        <li>Real apprenticeships and trade pathways</li>
+        <li>A smarter, compassionate approach to homelessness</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-        function showThankYou() {
-            setTimeout(function() {
-                document.getElementById('thankYouModal').style.display = 'block';
-                setTimeout(() => {
-                    document.getElementById('thankYouModal').style.display = 'none';
-                }, 3000);
-            }, 1000);
-        }
-    </script>
+<main>
+
+<section id="about">
+  <h2 class="section-title">Meet Patrick McAuley</h2>
+  <p class="section-intro">
+    Patrick is a commercial real estate professional, lifelong Hoosier, and community leader running for Congress
+    in Indiana’s 7th District. He believes Indianapolis deserves safer streets, attainable housing, and opportunity for every neighborhood.
+  </p>
+
+  <div class="about-grid">
+
+    <div class="about-card">
+      <span class="pill">Local roots</span>
+      <h3>Indianapolis first.</h3>
+      <p>
+        Every day, Patrick works with small businesses, property owners, and neighborhood leaders across Marion County.
+        His experience in commercial real estate gives him a close look at both Indy’s potential and the barriers that hold it back.
+      </p>
+      <p>
+        In early 2025, Patrick launched <strong>Future of Indy</strong> as a grassroots effort to listen — hosting coffees, roundtables,
+        and conversations with residents, business owners, faith leaders, and first responders.
+      </p>
+      <p>
+        Patrick’s commitment is simple: <strong>listen first, lead with common sense, and put Indianapolis ahead of Washington politics.</strong>
+      </p>
+    </div>
+
+    <div class="info-card" style="text-align:center;">
+      <img src="patrick-headshot.jpg" alt="Photo of Patrick McAuley" />
+      <h3>Patrick McAuley</h3>
+      <p style="color:#4b5563;">
+        Commercial real estate associate, community advocate, and founder of Future of Indy.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="priorities">
+  <h2 class="section-title">Patrick’s Priorities</h2>
+  <p class="section-intro">Four pillars guiding Patrick’s vision for Indianapolis.</p>
+
+  <div class="priorities-grid">
+    <div class="priority">
+      <h3>Public Safety & Trust</h3>
+      Support law enforcement, strengthen community policing, and rebuild trust.
+    </div>
+
+    <div class="priority">
+      <h3>Workforce Housing</h3>
+      Cut red tape and encourage attainable housing near job centers and transit.
+    </div>
+
+    <div class="priority">
+      <h3>Apprenticeships & Trades</h3>
+      Expand skilled-trade pathways and partner with employers, unions, and schools.
+    </div>
+
+    <div class="priority">
+      <h3>Homelessness Solutions</h3>
+      A compassionate but accountable response focused on recovery and stability.
+    </div>
+  </div>
+</section>
+
+<section id="future-of-indy">
+  <div class="band">
+    <div>
+      <h3>What is Future of Indy?</h3>
+      <p>
+        A district-wide listening initiative launched January 2025 to hear directly from residents about public safety,
+        housing, jobs, and homelessness — and to shape real solutions rooted in community feedback.
+      </p>
+    </div>
+    <a href="#join" class="btn btn-primary">Share Your Priorities</a>
+  </div>
+</section>
+
+<section id="join">
+  <h2 class="section-title">Join the Future of Indy</h2>
+  <p class="section-intro">Share your concerns. Volunteer. Host a conversation. Get involved.</p>
+</section>
+
+</main>
+
+<footer>
+  <strong>Future of Indy</strong> · Listening first. Leading with common sense.
+  <div style="margin-top:0.35rem;">Paid for by Future of Indy / Patrick McAuley for Congress.</div>
+</footer>
+
 </body>
 </html>
