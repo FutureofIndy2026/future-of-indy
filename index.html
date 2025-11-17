@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future of Indy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            min-height: 150px;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+            color: #ffffff;
+        }
+        header h2 {
+            margin: 10px 0 0;
+            font-size: 20px;
+            color: #00cc66;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        a.button,
+        button.button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 10px;
+            background-color: #003366;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            width: 70%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            color: #ffffff;
+        }
+        .policy-section ul {
+            padding-left: 20px;
+        }
+        .policy-section li {
+            margin-bottom: 10px;
+        }
+        .thank-you-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .thank-you-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Future of Indy</h1>
+        <h2>Shaping Indianapolis Together</h2>
+    </header>
+
+    <main>
+        <section>
+            <h3>About the Initiative</h3>
+            <p>Future of Indy is a conservative grassroots initiative to empower Indianapolis residents. We are focused on gathering feedback to make Indianapolis stronger. <u>It does not happen without focused, determined, hands-on and consistent energetic leadership.</u></p>
+        </section>
+
+        <section>
+            <h3>Survey</h3>
+            <p>Please take our 1-minute community survey.</p>
+            <a href="https://forms.gle/A8etaEAri94V8tS69" class="button">Take the Survey</a>
+        </section>
+
+        <section>
+            <div id="mc_embed_signup">
+                <form action="https://futureofindy.us19.list-manage.com/subscribe/post?u=7e739e6c5df440ff5e37d2a6b&amp;id=a883200159&amp;f_id=00cac2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" onsubmit="showThankYou();">
+                    <div id="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL">Join our team to volunteer:</label><br>
+                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="Enter your email">
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_7e739e6c5df440ff5e37d2a6b_a883200159" tabindex="-1" value="">
+                        </div>
+                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <h3>🏛️ Four Policy Pillars</h3>
+            <h4>Public Safety</h4>
+            <ul></ul>
+            <h4>Workforce Housing</h4>
+            <ul></ul>
+            <h4>Apprenticeships</h4>
+            <ul></ul>
+            <h4>Homelessness</h4>
+            <ul></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Future of Indy. All rights reserved.</p>
+    </footer>
+
+    <div id="thankYouModal" class="thank-you-modal">
+        <div class="thank-you-content">
+            <p>✅ Thank you for joining us!</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array(); 
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';ftypes[0]='email';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+
+        function showThankYou() {
+            setTimeout(function() {
+                document.getElementById('thankYouModal').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('thankYouModal').style.display = 'none';
+                }, 3000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
