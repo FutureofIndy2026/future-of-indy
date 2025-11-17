@@ -1,312 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Future of Indy – Patrick McAuley</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-      background: #f3f4f6;
-      color: #111827;
-    }
-    a { color: inherit; text-decoration: none; }
-
-    .wrap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    .hero {
-      background: #0b2958;
-      color: #fff;
-      padding: 2.5rem 0 2rem;
-    }
-    .hero-inner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      align-items: center;
-    }
-    .hero-text {
-      flex: 2;
-      min-width: 240px;
-    }
-    .hero-tagline {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      opacity: 0.85;
-      margin-bottom: 0.4rem;
-    }
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.55rem 1.3rem;
-      border-radius: 999px;
-      border: 2px solid transparent;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: #f97316;
-      border-color: #f97316;
-      color: #fff;
-    }
-    .btn-outline {
-      background: transparent;
-      border-color: #fff;
-      color: #fff;
-    }
-    .hero-photo {
-      flex: 1;
-      min-width: 180px;
-      text-align: center;
-    }
-    .hero-photo img {
-      width: 220px;
-      max-width: 100%;
-      border-radius: 999px;
-      border: 3px solid #ffffff;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    main {
-      padding: 2.25rem 0 3rem;
-    }
-
-    section { margin-bottom: 2.5rem; }
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-      color: #0b2958;
-    }
-    .section-intro {
-      font-size: 0.96rem;
-      color: #4b5563;
-      margin-bottom: 1.1rem;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 0.75rem;
-      padding: 1.25rem 1.3rem;
-      border: 1px solid #e5e7eb;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-    }
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.3rem;
-      font-size: 0.78rem;
-    }
-    .pill {
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      background: #e0e7ff;
-      color: #1d4ed8;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-    }
-    ul {
-      padding-left: 1.1rem;
-    }
-    ul li { margin-bottom: 0.25rem; }
-
-    form {
-      background: #ffffff;
-      border-radius: 0.75rem;
-      padding: 1.25rem 1.3rem;
-      border: 1px solid #e5e7eb;
-      font-size: 0.9rem;
-    }
-    .field {
-      margin-bottom: 0.75rem;
-    }
-    label {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 0.45rem 0.5rem;
-      border-radius: 0.4rem;
-      border: 1px solid #d1d5db;
-      font-size: 0.9rem;
-    }
-    textarea { min-height: 80px; resize: vertical; }
-    .small {
-      font-size: 0.78rem;
-      color: #6b7280;
-      margin-top: 0.4rem;
-    }
-
-    footer {
-      padding: 1.2rem 0 2rem;
-      border-top: 1px solid #e5e7eb;
-      background: #f9fafb;
-      font-size: 0.8rem;
-      color: #6b7280;
-      text-align: center;
-    }
-
-    @media (max-width: 640px) {
-      .hero-inner { flex-direction: column-reverse; text-align: left; }
-      .hero-photo img { width: 190px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future of Indy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #003366;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+            color: #ffffff; /* Title in white */
+        }
+        header h2 {
+            margin: 10px 0 0;
+            font-size: 24px;
+            color: #00cc66; /* Subtitle in green */
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #003366;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003366;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Future of Indy</h1>
+        <h2>Shaping Indianapolis Together</h2>
+    </header>
 
-<section class="hero">
-  <div class="wrap hero-inner">
-    <div class="hero-text">
-      <div class="hero-tagline">Patrick McAuley · Indiana’s 7th District</div>
-      <h1>Hands-on. Consistent. Energetic. Focused. Leadership.</h1>
+    <main>
+        <section>
+            <h3>About the Initiative</h3>
+            <p>Future of Indy is about bringing community voices together to shape the future of education, infrastructure, and public safety in Indianapolis. We believe the future is brighter when every voice is heard.</p>
+        </section>
 
-      <div class="hero-buttons">
-        <a href="#join" class="btn btn-primary">Join the Conversation</a>
-        <a href="#priorities" class="btn btn-outline">See the Priorities</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="patrick-headshot.jpeg" alt="Photo of Patrick McAuley" />
-    </div>
-  </div>
-</section>
+        <section>
+            <h3>Survey</h3>
+            <p>Take our 1-minute community survey and share what matters most to you.</p>
+            <a href="#" class="button">Take the Survey</a>
+        </section>
 
-<main class="wrap">
+        <section>
+            <h3>Get Involved</h3>
+            <p>Stay informed about upcoming community meetings, surveys, and volunteer opportunities to help shape the future of Indianapolis.</p>
+        </section>
+    </main>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>Meet Patrick</h2>
-    <p class="section-intro">
-   Patrick McAuley is a commercial real estate professional and lifelong Hoosier running for Congress in Indiana’s 7th District. Born and raised in Broad Ripple, Patrick graduated from North Central High School, where he helped lead the men’s tennis team to back-to-back state championships and served as Vice President of both his junior and senior class. He went on to attend Wabash College, where he continued his commitment to leadership and service as a member of the men’s tennis team and several student organizations. His collegiate career was highlighted by earning the honor of <strong>2018 NCAA All-American</strong> after competing in the national championships. Patrick later received a master’s degree in International Economics and Finance from Valparaiso University while simultaneously working full time. After returning home to Indianapolis in 2022, Patrick became actively involved in civic and neighborhood engagement on the city’s north side, serving as a precinct committeeman and working closely with community leaders, residents, and local organizations. In January 2025, Patrick launched <strong>Future of Indy</strong> with a simple purpose: to listen. What began as a grassroots effort to understand what matters most to Indianapolis voters has rapidly grown into a full, community-driven congressional campaign—focused on public safety, workforce housing, apprenticeships, and a more accountable approach to homelessness.
-    </p>
-
-    <div class="card">
-      <p>
-        Patrick works with small businesses, property owners, and neighborhoods across Marion County. That experience
-        has shown him both the opportunities in our city and the red tape and safety concerns that hold people back.
-      </p>
-      <p>
-        Through coffee chats, roundtables, and one-on-one conversations, Patrick is gathering ideas from
-        residents, faith leaders, and first responders in every corner of the district.
-      </p>
-      <p>
-        His promise is simple: listen and put Indianapolis first.
-      </p>
-    </div>
-  </section>
-
-  <!-- PRIORITIES -->
-  <section id="priorities">
-    <h2>Four Priorities for the Future of Indy</h2>
-    <p class="section-intro">
-      These are the core issues Patrick hears about again and again in Indiana’s 7th District.
-    </p>
-
-    <div class="card">
-      <strong>Public Safety & Trust</strong>
-      <div class="pill-list">
-        <span class="pill">Public Safety</span>
-      </div>
-      <ul>
-        <li>Support police, firefighters, and first responders with training and staffing.</li>
-        <li>Encourage community policing and transparency that rebuilds trust.</li>
-        <li>Help officers, teachers, and nurses live in the neighborhoods they serve.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <strong>Workforce Housing</strong>
-      <div class="pill-list">
-        <span class="pill">Housing</span>
-      </div>
-      <ul>
-        <li>Promote attainable housing for working families close to jobs and transit.</li>
-        <li>Cut red tape that slows down responsible, community-led projects.</li>
-        <li>Reward cities that streamline permitting and focus on workforce housing.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <strong>Apprenticeships & Skilled Trades</strong>
-      <div class="pill-list">
-        <span class="pill">Apprenticeships</span>
-      </div>
-      <ul>
-        <li>Strengthen connections between high schools, career centers, unions, and employers.</li>
-        <li>Grow apprenticeships in construction, healthcare, logistics, tech, and manufacturing.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <strong>Homelessness with Accountability & Hope</strong>
-      <div class="pill-list">
-        <span class="pill">Homelessness</span>
-      </div>
-      <ul>
-        <li>Partner with nonprofits, churches, and charities focused on recovery and mental health.</li>
-        <li>Support transitional housing tied to treatment, job training, and responsibility.</li>
-        <li>Keep downtown, parks, and business areas safe, clean, and open for everyone.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- JOIN -->
-  <section id="join">
-    <h2>Join the Future of Indy</h2>
-    <p class="section-intro">
-      Join our team.
-    </p>
-
-    <form>
-      <div class="field">
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" placeholder="First and last name" />
-      </div>
-      <div class="field">
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="you@example.com" />
-      </div>
-      <div class="field">
-        <label for="zip">ZIP Code</label>
-        <input id="zip" type="text" name="zip" placeholder="ZIP" />
-      </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Share with Patrick</button>
-      <div class="small">
-        This is a sample form. Connect it to your email list or campaign tools to collect responses.
-      </div>
-    </form>
-  </section>
-
-</main>
-
-<footer>
-  <div><strong>Future of Indy</strong> · Hands-on. Consistent. Energetic. Focused. Leadership.</div>
-  <div style="margin-top:0.3rem;">Paid for by Future of Indy / Patrick McAuley for Congress.</div>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 Future of Indy. All rights reserved.</p>
+    </footer>
 </body>
 </html>
