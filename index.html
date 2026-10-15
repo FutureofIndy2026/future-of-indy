@@ -1,182 +1,156 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future of Indy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #003366;
-            min-height: 150px;
-            padding: 40px 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-            color: #ffffff;
-        }
-        header h2 {
-            margin: 10px 0 0;
-            font-size: 20px;
-            color: #00cc66;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        a.button,
-        button.button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin-top: 10px;
-            background-color: #003366;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        form {
-            margin-top: 20px;
-        }
-        input[type="email"] {
-            padding: 10px;
-            width: 70%;
-            max-width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #003366;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #003366;
-            color: #ffffff;
-        }
-        .policy-section ul {
-            padding-left: 20px;
-        }
-        .policy-section li {
-            margin-bottom: 10px;
-        }
-        .thank-you-modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .thank-you-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 400px;
-            text-align: center;
-            border-radius: 8px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Patrick McAuley for U.S. Congress</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #101a2a;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      min-height: calc(100vh - 65px);
+    }
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6vw;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 4.1vw, 4.75rem);
+      line-height: 1.09;
+      margin-bottom: 30px;
+    }
+
+    h1 strong {
+      color: #ff6962;
+    }
+
+    p {
+      font-size: clamp(1.12rem, 1.65vw, 1.55rem);
+      line-height: 1.5;
+      color: #e5e9f1;
+    }
+
+    .vote {
+      font-weight: 800;
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .slogan {
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ff6962;
+      font-size: 2.4rem;
+    }
+
+    .photo {
+      position: relative;
+      min-height: 610px;
+      overflow: hidden;
+    }
+
+    .photo img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 19%;
+    }
+
+    footer {
+      background: #0b1220;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .disclaimer {
+      display: inline-block;
+      border: 2px solid white;
+      color: white;
+      padding: 7px 13px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 780px) {
+      main {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .photo {
+        height: 47vh;
+        min-height: 310px;
+      }
+
+      .message {
+        padding: 45px 26px;
+      }
+
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      .vote {
+        font-size: 1.4rem;
+      }
+
+      .slogan {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Future of Indy</h1>
-        <h2>Shaping Indianapolis Together</h2>
-    </header>
+  <main>
+    <section class="message">
+      <h1>
+        André Carson has
+        <strong>destroyed our communities.</strong>
+      </h1>
 
-    <main>
-        <section>
-            <h3>About</h3>
-            <p>Future of Indy is a conservative grassroots initiative to empower Indianapolis residents. We are focused on gathering feedback to make Indianapolis stronger. <u>It does not happen without focused, determined, hands-on and consistent energetic leadership.</u></p>
-        </section>
+      <p>
+        It's time for focused, determined,
+        hands-on and consistent energetic leadership.
+      </p>
 
-        <section>
-            <h3>Survey</h3>
-            <p>Please take our 1-minute community survey.</p>
-            <a href="https://forms.gle/A8etaEAri94V8tS69" class="button">Take the Survey</a>
-        </section>
+      <p class="vote">
+        Vote Patrick McAuley for U.S. Congress
+        now until November 3rd.
+      </p>
 
-        <section>
-            <h3>Join Our Team</h3>
-            <form id="custom-form">
-                <input type="email" name="EMAIL" placeholder="Enter your email" required>
-                <input type="submit" value="Join Now">
-            </form>
-        </section>
+      <p class="slogan">The time is now.</p>
+    </section>
 
-        <section class="policy-section">
-            <h3>🏛️ Four Policy Pillars</h3>
-            <h4>Public Safety</h4>
-            <ul></ul>
-            <h4>Workforce Housing</h4>
-            <ul></ul>
-            <h4>Apprenticeships</h4>
-            <ul></ul>
-            <h4>Homelessness</h4>
-            <ul></ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Future of Indy. All rights reserved.</p>
-    </footer>
-
-    <div id="thankYouModal" class="thank-you-modal">
-        <div class="thank-you-content">
-            <p>Thank you. We are really excited!</p>
-        </div>
+    <div class="headshot">
+      <img src="patrick-headshot.jpeg"
+           alt="Patrick McAuley with American flag">
     </div>
+  </main>
 
-    <script>
-        document.getElementById('custom-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = e.target.EMAIL.value;
-
-            fetch('https://futureofindy.us19.list-manage.com/subscribe/post?u=7e739e6c5df440ff5e37d2a6b&id=a883200159&f_id=00cac2e1f0', {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: `EMAIL=${encodeURIComponent(email)}`
-            });
-
-            document.getElementById('thankYouModal').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('thankYouModal').style.display = 'none';
-                e.target.reset();
-            }, 3000);
-        });
-    </script>
+  <footer>
+    <span class="disclaimer">
+      Paid for by Future of Indy
+    </span>
+  </footer>
 </body>
 </html>
